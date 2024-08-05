@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SignAssembly>False</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Deterministic>True</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Deterministic>True</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Device.Common\IMX.Device.Common.csproj" />
+    <ProjectReference Include="..\IMX.Device.Base\IMX.Device.Base.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="H.Maths">
+      <HintPath>..\..\..\IMX.Common.Library\H.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="H.WPF.Framework">
+      <HintPath>..\..\..\IMX.Common.Library\Framework\H.WPF.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="H.WPF.ToolKit">
+      <HintPath>..\..\..\IMX.Common.Library\Framework\H.WPF.ToolKit.dll</HintPath>
+    </Reference>
+    <Reference Include="IMX.Helpers">
+      <HintPath>..\..\..\IMX.Common.Helpers\IMX.Helpers\IMX.Helpers\bin\Debug\net8.0-windows\IMX.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="IMX.Logger">
+      <HintPath>..\..\..\IMX.Common.Logger\IMX.Logger\IMX.Logger\bin\Debug\net8.0-windows\IMX.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Visa">
+      <HintPath>..\..\..\IMX.Common.Library\VISA\NationalInstruments.Visa.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.Framework">
+      <HintPath>..\..\..\IMX.Common.Library\Piggy.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.VehicleBus.Common">
+      <HintPath>..\..\..\IMX.Common.Library\VehicleBus\Piggy.VehicleBus.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.VehicleBus.Device">
+      <HintPath>..\..\..\IMX.Common.Library\VehicleBus\Piggy.VehicleBus.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.VehicleBus.MessageProcess">
+      <HintPath>..\..\..\IMX.Common.Library\VehicleBus\Piggy.VehicleBus.MessageProcess.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Base\" />
+  </ItemGroup>
+
+</Project>

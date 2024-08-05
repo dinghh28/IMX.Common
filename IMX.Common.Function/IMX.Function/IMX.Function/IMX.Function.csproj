@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="FuntionConfig\" />
+    <Folder Include="Inerfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="H.Maths">
+      <HintPath>..\..\..\IMX.Common.Library\H.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="H.WPF.Framework">
+      <HintPath>..\..\..\IMX.Common.Library\Framework\H.WPF.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="H.WPF.ToolKit">
+      <HintPath>..\..\..\IMX.Common.Library\Framework\H.WPF.ToolKit.dll</HintPath>
+    </Reference>
+    <Reference Include="IMX.Device">
+      <HintPath>..\..\..\IMX.Common.Library\IMX.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="IMX.Logger">
+      <HintPath>..\..\..\IMX.Common.Logger\IMX.Logger\IMX.Logger\bin\Debug\net8.0-windows\IMX.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.Framework">
+      <HintPath>..\..\..\IMX.Common.Library\Piggy.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

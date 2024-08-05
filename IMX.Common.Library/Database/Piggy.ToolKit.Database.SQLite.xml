@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piggy.ToolKit.Database.SQLite</name>
+    </assembly>
+    <members>
+        <member name="T:Piggy.ToolKit.Database.SQLite.SQLiteDatabase">
+            <summary>
+            SQLite 数据库操作接口
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLite.SQLiteDatabase.Runtime">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLite.SQLiteDatabase.DatabaseType">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLite.SQLiteDatabase.ConnectionString">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLite.SQLiteDatabase.CreateConnection">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLite.SQLiteDatabase.CreateCommand">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLite.SQLiteDatabase.CreateDataAdapter">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLite.SQLiteDatabase.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLite.SQLiteDatabase.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connectionString">连接字符串</param>
+        </member>
+    </members>
+</doc>

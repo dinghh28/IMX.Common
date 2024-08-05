@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Enumerations\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="H.Maths">
+      <HintPath>..\..\..\IMX.Common.Library\H.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="H.WPF.Framework">
+      <HintPath>..\..\..\IMX.Common.Library\Framework\H.WPF.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="H.WPF.ToolKit">
+      <HintPath>..\..\..\IMX.Common.Library\Framework\H.WPF.ToolKit.dll</HintPath>
+    </Reference>
+    <Reference Include="IMX.Helpers">
+      <HintPath>..\..\..\IMX.Common.Helpers\IMX.Helpers\IMX.Helpers\bin\Debug\net8.0-windows\IMX.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="IMX.Logger">
+      <HintPath>..\..\..\IMX.Common.Logger\IMX.Logger\IMX.Logger\bin\Debug\net8.0-windows\IMX.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivi.Visa">
+      <HintPath>..\..\..\IMX.Common.Library\VISA\Ivi.Visa.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Visa">
+      <HintPath>..\..\..\IMX.Common.Library\VISA\NationalInstruments.Visa.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.Framework">
+      <HintPath>..\..\..\IMX.Common.Library\Piggy.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.VehicleBus.Common">
+      <HintPath>..\..\..\IMX.Common.Library\VehicleBus\Piggy.VehicleBus.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

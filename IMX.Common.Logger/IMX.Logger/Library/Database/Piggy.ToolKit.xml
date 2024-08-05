@@ -1,0 +1,2020 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piggy.ToolKit</name>
+    </assembly>
+    <members>
+        <member name="T:Piggy.ToolKit.Configuration.IniFileOperate">
+            <summary>
+            INI 文件操作类
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.GetFileEncoding(System.String)">
+            <summary>
+            获取文件字符编码格式
+            </summary>
+            <param name="filePath">文件绝对路径</param>
+            <returns>字符编码格式</returns>
+        </member>
+        <member name="P:Piggy.ToolKit.Configuration.IniFileOperate.FilePath">
+            <summary>
+            INI 文件绝对路径
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Configuration.IniFileOperate.Encoding">
+            <summary>
+            字符编码格式
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Configuration.IniFileOperate.BufferSize">
+            <summary>
+            缓冲区大小（默认值: 0x400）
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="filePath">INI 文件绝对路径</param>
+            <exception cref="T:System.ArgumentNullException"/>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.#ctor(System.String,System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="filePath">INI 文件绝对路径</param>
+            <param name="encoding">字符编码格式</param>
+            <exception cref="T:System.ArgumentNullException"/>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.ReadSections">
+            <summary>
+            读取节点列表
+            </summary>
+            <returns>操作结果 @ 节点列表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.ReadKeys(System.String)">
+            <summary>
+            读取节点下键名列表
+            </summary>
+            <param name="section">节点名称</param>
+            <returns>操作结果 @ 键名列表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.ReadKeyValues">
+            <summary>
+            读取键值对字典
+            </summary>
+            <returns>操作结果 @ 键值对字典</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.ReadKeyValues(System.String)">
+            <summary>
+            读取节点下键值对字典
+            </summary>
+            <param name="section">节点名称</param>
+            <returns>操作结果 @ 键值对字典</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.ReadValue(System.String,System.String)">
+            <summary>
+            读取键值
+            </summary>
+            <param name="section">节点名称</param>
+            <param name="key">键名</param>
+            <returns>操作结果 @ 键值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.ReadValue(System.String,System.String,System.String)">
+            <summary>
+            读取键值
+            </summary>
+            <param name="section">节点名称</param>
+            <param name="key">键名</param>
+            <param name="defValue">默认值</param>
+            <returns>操作结果 @ 键值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.ReadValue``1(System.String,System.String)">
+            <summary>
+            读取键值
+            </summary>
+            <param name="section">节点名称</param>
+            <param name="key">键名</param>
+            <returns>操作结果 @ 键值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.ReadValue``1(System.String,System.String,``0)">
+            <summary>
+            读取键值
+            </summary>
+            <param name="section">节点名称</param>
+            <param name="key">键名</param>
+            <param name="defValue">默认值</param>
+            <returns>操作结果 @ 键值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            写入键值
+            </summary>
+            <param name="section">节点名称</param>
+            <param name="key">键名</param>
+            <param name="value">键值</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperate.WriteValue``1(System.String,System.String,``0)">
+            <summary>
+            写入键值
+            </summary>
+            <param name="section">节点名称</param>
+            <param name="key">键名</param>
+            <param name="value">键值</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Configuration.IniFileOperateManager">
+            <summary>
+            INI 文件操作类管理器
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperateManager.GetIniFileOperate(System.String)">
+            <summary>
+            获取 INI 文件操作类
+            </summary>
+            <param name="filePath">INI 文件绝对路径</param>
+            <returns>INI 文件操作类</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Configuration.IniFileOperateManager.GetIniFileOperate(System.String,System.Text.Encoding)">
+            <summary>
+            获取 INI 文件操作类
+            </summary>
+            <param name="filePath">INI 文件路径</param>
+            <param name="encoding">字符编码格式</param>
+            <returns>INI 文件操作类</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Configuration.IniFileOperateManager.Manager">
+            <summary>
+            管理器
+            </summary>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.HashAlgorithmObject">
+            <summary>
+            对称算法抽象对象
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.HashAlgorithmObject.Encoding">
+            <summary>
+            字符编码（默认值: <see cref="P:System.Text.Encoding.ASCII"/>）
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.HashAlgorithmObject.Provider">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.HashAlgorithmObject.Hash(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.HashAlgorithmObject.Hash(System.Byte[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.HashAlgorithmObject.HashFile(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.HashAlgorithmObject.InternalDispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.RSA">
+            <summary>
+            RSA 算法
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.RSA.Encoding">
+            <summary>
+            字符编码（默认值: <see cref="P:System.Text.Encoding.ASCII"/>）
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.RSA.Provider">
+            <summary>
+            Provider
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RSA.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RSA.#ctor(System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RSA.Encrypt(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RSA.Encrypt(System.Byte[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RSA.EncryptFile(System.String,System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RSA.Decrypt(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RSA.Decrypt(System.Byte[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RSA.DecryptFile(System.String,System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RSA.InternalDispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.SHA384">
+            <summary>
+            SHA384 算法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SHA384.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SHA384.#ctor(System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.SHA256">
+            <summary>
+            SHA256 算法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SHA256.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SHA256.#ctor(System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.SHA512">
+            <summary>
+            SHA512 算法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SHA512.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SHA512.#ctor(System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.SHA1">
+            <summary>
+            SHA1 算法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SHA1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SHA1.#ctor(System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.ICryptoAlgorithm">
+            <summary>
+            加密算法接口
+            </summary>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.IAsymmetricAlgorithm">
+            <summary>
+            非对称算法接口
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.IAsymmetricAlgorithm.Encoding">
+            <summary>
+            字符编码
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.IAsymmetricAlgorithm.Encrypt(System.String)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="text">待加密字符串</param>
+            <returns>操作结果 @ 已加密字符串（BASE64 字符串）</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.IAsymmetricAlgorithm.Encrypt(System.Byte[])">
+            <summary>
+            加密字节数组
+            </summary>
+            <param name="data">待加密数组</param>
+            <returns>操作结果 @ 已加密数据</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.IAsymmetricAlgorithm.EncryptFile(System.String,System.String,System.Boolean)">
+            <summary>
+            加密文件
+            </summary>
+            <param name="inFilePath">待加密文件路径</param>
+            <param name="outFilePath">已加密文件路径</param>
+            <param name="overWrite">覆盖文件</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.IAsymmetricAlgorithm.Decrypt(System.String)">
+            <summary>
+            解密字符串
+            </summary>
+            <param name="text">待解密字符串（BASE64 字符串）</param>
+            <returns>操作结果 @ 已解密字符串</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.IAsymmetricAlgorithm.Decrypt(System.Byte[])">
+            <summary>
+            解密字节数组
+            </summary>
+            <param name="data">待解密数组</param>
+            <returns>操作结果 @ 已解密数据</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.IAsymmetricAlgorithm.DecryptFile(System.String,System.String,System.Boolean)">
+            <summary>
+            解密文件
+            </summary>
+            <param name="inFilePath">待解密文件路径</param>
+            <param name="outFilePath">已解密文件路径</param>
+            <param name="overWrite">覆盖文件</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.IHashAlgorithm">
+            <summary>
+            HASH 算法接口
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.IHashAlgorithm.Encoding">
+            <summary>
+            字符编码
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.IHashAlgorithm.Provider">
+            <summary>
+            Provider
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.IHashAlgorithm.Hash(System.String)">
+            <summary>
+            计算字符串 HASH 值
+            </summary>
+            <param name="text">待计算字符串</param>
+            <returns>操作结果 @ HASH 值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.IHashAlgorithm.Hash(System.Byte[])">
+            <summary>
+            加密字节数组
+            </summary>
+            <param name="data">待计算字节数组</param>
+            <returns>操作结果 @ HASH 值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.IHashAlgorithm.HashFile(System.String)">
+            <summary>
+            加密文件
+            </summary>
+            <param name="filePath">待计算文件路径</param>
+            <returns>操作结果 @ HASH 值</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.MD5">
+            <summary>
+            MD5 算法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.MD5.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.MD5.#ctor(System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.CryptoAlgorithmManager">
+            <summary>
+            加密算法管理器
+            </summary>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.RC2">
+            <summary>
+            RC2 算法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RC2.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RC2.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RC2.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RC2.#ctor(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RC2.#ctor(System.String,System.String,System.Text.Encoding,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.CipherMode,System.Security.Cryptography.PaddingMode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+            <param name="encoding">字符编码</param>
+            <param name="blockSize">加密操作的块大小（bit）</param>
+            <param name="feedbackSize">加密操作的反馈大小（bit）</param>
+            <param name="keySize">对称算法使用的密钥的大小（bit）</param>
+            <param name="mode">对称算法中使用的密码模式</param>
+            <param name="padding">对称算法中使用的填充模式</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.RC2.#ctor(System.String,System.String,System.Text.Encoding,System.Int32,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.CipherMode,System.Security.Cryptography.PaddingMode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+            <param name="encoding">字符编码</param>
+            <param name="blockSize">加密操作的块大小（bit）</param>
+            <param name="effectiveKeySize">加密操作的块大小（bit）</param>
+            <param name="feedbackSize">加密操作的反馈大小（bit）</param>
+            <param name="keySize">对称算法使用的密钥的大小（bit）</param>
+            <param name="mode">对称算法中使用的密码模式</param>
+            <param name="padding">对称算法中使用的填充模式</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.TripleDES">
+            <summary>
+            Triple DES 算法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.TripleDES.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.TripleDES.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.TripleDES.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.TripleDES.#ctor(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.TripleDES.#ctor(System.String,System.String,System.Text.Encoding,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.CipherMode,System.Security.Cryptography.PaddingMode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+            <param name="encoding">字符编码</param>
+            <param name="blockSize">加密操作的块大小（bit）</param>
+            <param name="feedbackSize">加密操作的反馈大小（bit）</param>
+            <param name="keySize">对称算法使用的密钥的大小（bit）</param>
+            <param name="mode">对称算法中使用的密码模式</param>
+            <param name="padding">对称算法中使用的填充模式</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.DES">
+            <summary>
+            DES 算法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.DES.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.DES.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.DES.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.DES.#ctor(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.DES.#ctor(System.String,System.String,System.Text.Encoding,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.CipherMode,System.Security.Cryptography.PaddingMode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+            <param name="encoding">字符编码</param>
+            <param name="blockSize">加密操作的块大小（bit）</param>
+            <param name="feedbackSize">加密操作的反馈大小（bit）</param>
+            <param name="keySize">对称算法使用的密钥的大小（bit）</param>
+            <param name="mode">对称算法中使用的密码模式</param>
+            <param name="padding">对称算法中使用的填充模式</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.AES">
+            <summary>
+            AES 算法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.AES.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.AES.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.AES.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.AES.#ctor(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.AES.#ctor(System.String,System.String,System.Text.Encoding,System.Int32,System.Int32,System.Int32,System.Security.Cryptography.CipherMode,System.Security.Cryptography.PaddingMode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">KEY 参数</param>
+            <param name="iv">IV 参数</param>
+            <param name="encoding">字符编码</param>
+            <param name="blockSize">加密操作的块大小（bit）</param>
+            <param name="feedbackSize">加密操作的反馈大小（bit）</param>
+            <param name="keySize">对称算法使用的密钥的大小（bit）</param>
+            <param name="mode">对称算法中使用的密码模式</param>
+            <param name="padding">对称算法中使用的填充模式</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.ISymmetricAlgorithm">
+            <summary>
+            对称算法接口
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.ISymmetricAlgorithm.Encoding">
+            <summary>
+            字符编码
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.ISymmetricAlgorithm.Provider">
+            <summary>
+            Provider
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.ISymmetricAlgorithm.Encrypt(System.String)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="text">待加密字符串</param>
+            <returns>操作结果 @ 已加密字符串（BASE64 字符串）</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.ISymmetricAlgorithm.Encrypt(System.Byte[])">
+            <summary>
+            加密字节数组
+            </summary>
+            <param name="data">待加密数组</param>
+            <returns>操作结果 @ 已加密数据</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.ISymmetricAlgorithm.EncryptFile(System.String,System.String,System.Boolean)">
+            <summary>
+            加密文件
+            </summary>
+            <param name="inFilePath">待加密文件路径</param>
+            <param name="outFilePath">已加密文件路径</param>
+            <param name="overWrite">覆盖文件</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.ISymmetricAlgorithm.Decrypt(System.String)">
+            <summary>
+            解密字符串
+            </summary>
+            <param name="text">待解密字符串（BASE64 字符串）</param>
+            <returns>操作结果 @ 已解密字符串</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.ISymmetricAlgorithm.Decrypt(System.Byte[])">
+            <summary>
+            解密字节数组
+            </summary>
+            <param name="data">待解密数组</param>
+            <returns>操作结果 @ 已解密数据</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.ISymmetricAlgorithm.DecryptFile(System.String,System.String,System.Boolean)">
+            <summary>
+            解密文件
+            </summary>
+            <param name="inFilePath">待解密文件路径</param>
+            <param name="outFilePath">已解密文件路径</param>
+            <param name="overWrite">覆盖文件</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject">
+            <summary>
+            对称算法抽象对象
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.Encoding">
+            <summary>
+            字符编码（默认值: <see cref="P:System.Text.Encoding.ASCII"/>）
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.Provider">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.Encrypt(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.Encrypt(System.Byte[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.EncryptFile(System.String,System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.Decrypt(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.Decrypt(System.Byte[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.DecryptFile(System.String,System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.Crypto(System.Byte[],System.Security.Cryptography.ICryptoTransform)">
+            <summary>
+            加密/解密数据
+            </summary>
+            <param name="data">数据</param>
+            <param name="transform">加密/解密转换器</param>
+            <returns>操作结果 @ 已加密/解密数据</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.Crypto(System.IO.Stream,System.IO.Stream,System.Security.Cryptography.ICryptoTransform)">
+            <summary>
+            加密/解密数据流
+            </summary>
+            <param name="inStream">输入流</param>
+            <param name="outStream">输出流</param>
+            <param name="transform">加密/解密转换器</param>
+            <returns>操作结果 @ 已加密/解密数据</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Cryptography.SymmetricAlgorithmObject.InternalDispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Piggy.ToolKit.Database.DatabaseInteractor">
+            <summary>
+            数据库交互器
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Database.DatabaseInteractor.NUMBER_KEY">
+            <summary>
+            影响数量键名
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Database.DatabaseInteractor.database">
+            <summary>
+            数据库操作
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.DatabaseInteractor.DatabaseType">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.DatabaseInteractor.ConnectionString">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.DatabaseInteractor.IsDatabaseInited">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.#ctor(Super.Zoo.Framework.Logger.ILogger)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logger">日志记录接口</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.InitDatabase(Piggy.ToolKit.Database.IDatabase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.InitDatabase``1(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.UnInitDatabase">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteQuery(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteQuery(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteQuerys(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteQuerys(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteNonQuery(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteNonQuery(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteScalar(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteScalar(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteTransaction(Piggy.ToolKit.Database.SQLTransaction[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteTransaction(System.Collections.Generic.List{Piggy.ToolKit.Database.SQLTransaction})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteStoredProcedure(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.ExecuteStoredProcedure(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractor.InternalDispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Piggy.ToolKit.Database.DatabaseInteractorExtension">
+            <summary>
+            数据库交互器扩展方法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteQuery(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 数据表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteQuery(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 数据表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteQuerys(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 数据集</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteQuerys(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 数据集</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteNonQuery(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 操作记录数</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteNonQuery(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 操作记录数</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteScalar(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 首行首列值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteScalar(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 首行首列值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteTransaction(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,Piggy.ToolKit.Database.SQLTransaction[])">
+            <summary>
+            执行事务
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="parameters">事务参数</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteTransaction(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLTransaction})">
+            <summary>
+            执行事务
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="parameters">事务参数</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteStoredProcedure(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="procName">存储过程名称</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>操作结果 @ 返回值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.DatabaseInteractorExtension.ExecuteStoredProcedure(Piggy.ToolKit.Database.DatabaseInteractor,System.Int32,System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="interactor">[THIS] 数据库交互器</param>
+            <param name="retry">重试次数</param>
+            <param name="procName">存储过程名称</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>操作结果 @ 返回值</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Database.IDatabase">
+            <summary>
+            数据库操作接口
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.IDatabase.Runtime">
+            <summary>
+            运行依赖
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.IDatabase.DatabaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.IDatabase.ConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabase.CreateConnection">
+            <summary>
+            创建 <see cref="T:System.Data.IDbConnection"/> 对象
+            </summary>
+            <returns><see cref="T:System.Data.IDbConnection"/> 对象</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabase.CreateCommand">
+            <summary>
+            创建 <see cref="T:System.Data.IDbCommand"/> 对象
+            </summary>
+            <returns><see cref="T:System.Data.IDbCommand"/> 对象</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabase.CreateDataAdapter">
+            <summary>
+            创建 <see cref="T:System.Data.IDbDataAdapter"/> 对象
+            </summary>
+            <returns><see cref="T:System.Data.IDbDataAdapter"/> 对象</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Database.IDatabaseInteractor">
+            <summary>
+            数据库交互器接口
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.IDatabaseInteractor.DatabaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.IDatabaseInteractor.ConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.IDatabaseInteractor.IsDatabaseInited">
+            <summary>
+            初始化标志
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.InitDatabase(Piggy.ToolKit.Database.IDatabase)">
+            <summary>
+            初始化数据库
+            </summary>
+            <param name="iDatabase">数据库操作类</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.InitDatabase``1(System.String)">
+            <summary>
+            初始化数据库
+            </summary>
+            <typeparam name="Database">数据库操作对象类型</typeparam>
+            <param name="connectionString">连接字符串</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.UnInitDatabase">
+            <summary>
+            反初始化数据库
+            </summary>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteQuery(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 数据表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteQuery(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 数据表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteQuerys(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 数据集</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteQuerys(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 数据集</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteNonQuery(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 操作记录数</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteNonQuery(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 操作记录数</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteScalar(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 首行首列值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteScalar(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行 SQL 语句
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 参数</param>
+            <returns>操作结果 @ 首行首列值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteTransaction(Piggy.ToolKit.Database.SQLTransaction[])">
+            <summary>
+            执行事务
+            </summary>
+            <param name="parameters">事务参数</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteTransaction(System.Collections.Generic.List{Piggy.ToolKit.Database.SQLTransaction})">
+            <summary>
+            执行事务
+            </summary>
+            <param name="parameters">事务参数</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteStoredProcedure(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程名称</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>操作结果 @ 返回值</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.IDatabaseInteractor.ExecuteStoredProcedure(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程名称</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>操作结果 @ 返回值</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Database.SQLParameter">
+            <summary>
+            SQL 执行参数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLParameter.Create(System.String,System.Object,System.Data.DbType)">
+            <summary>
+            构造 SQL 执行参数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="value">参数值</param>
+            <param name="type">数据类型</param>
+            <returns>SQL 执行参数</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLParameter.Create(System.String,System.Object,System.Data.DbType,System.Int32)">
+            <summary>
+            构造 SQL 执行参数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="value">参数值</param>
+            <param name="type">数据类型</param>
+            <param name="size">数据长度</param>
+            <returns>SQL 执行参数</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLParameter.Create(System.String,System.Object,System.Data.DbType,System.Data.ParameterDirection)">
+            <summary>
+            构造 SQL 执行参数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="value">参数值</param>
+            <param name="type">数据类型</param>
+            <param name="direction">数据方向</param>
+            <returns>SQL 执行参数</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLParameter.Create(System.String,System.Object,System.Data.DbType,System.Int32,System.Data.ParameterDirection)">
+            <summary>
+            构造 SQL 执行参数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="value">参数值</param>
+            <param name="type">数据类型</param>
+            <param name="size">数据长度</param>
+            <param name="direction">数据方向</param>
+            <returns>SQL 执行参数</returns>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLParameter.Name">
+            <summary>
+            参数名
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLParameter.Value">
+            <summary>
+            参数值
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLParameter.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLParameter.DataSize">
+            <summary>
+            数据长度
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLParameter.Direction">
+            <summary>
+            数据方向
+            </summary>
+            <remarks>存储过程用</remarks>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLParameter.#ctor(System.String,System.Object,System.Data.DbType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="value">参数值</param>
+            <param name="type">数据类型</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLParameter.#ctor(System.String,System.Object,System.Data.DbType,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="value">参数值</param>
+            <param name="type">数据类型</param>
+            <param name="size">数据长度</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLParameter.#ctor(System.String,System.Object,System.Data.DbType,System.Data.ParameterDirection)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="value">参数值</param>
+            <param name="type">数据类型</param>
+            <param name="direction">数据方向</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLParameter.#ctor(System.String,System.Object,System.Data.DbType,System.Int32,System.Data.ParameterDirection)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="value">参数值</param>
+            <param name="type">数据类型</param>
+            <param name="size">数据长度</param>
+            <param name="direction">数据方向</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLParameter.LoadParameter(System.Data.IDbDataParameter@)">
+            <summary>
+            加载执行参数
+            </summary>
+            <param name="parameter">[REF] 数据参数</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Database.SQLTransaction">
+            <summary>
+            SQL 事务参数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLTransaction.Create(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            构造 SQL 事务参数
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 执行参数</param>
+            <returns>SQL 事务参数</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLTransaction.Create(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            构造 SQL 事务参数
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 执行参数</param>
+            <returns>SQL 事务参数</returns>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLTransaction.SQL">
+            <summary>
+            SQL 语句
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Database.SQLTransaction.Parameters">
+            <summary>
+            SQL 执行参数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLTransaction.#ctor(System.String,Piggy.ToolKit.Database.SQLParameter[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 执行参数</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Database.SQLTransaction.#ctor(System.String,System.Collections.Generic.List{Piggy.ToolKit.Database.SQLParameter})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sql">SQL 语句</param>
+            <param name="parameters">SQL 执行参数</param>
+        </member>
+        <member name="T:Piggy.ToolKit.ProjectVersion">
+            <summary>
+            项目版本信息
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.ProjectVersion.Version">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.ProjectVersion.UpdateTime">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.ProjectVersion.YearVersion">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.ProjectVersion.VersionType">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.ProjectVersion.TypeVersion">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.ProjectVersion.Assembly">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.ProjectVersion.UpdateRecordFile">
+            <inheritdoc/>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.FtpUploadMode">
+            <summary>
+            FTP 记录样式
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpUploadMode.None">
+            <summary>
+            默认模式
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpUploadMode.Overwrite">
+            <summary>
+            覆盖模式
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpUploadMode.Append">
+            <summary>
+            追加模式
+            </summary>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.FtpRecordFormat">
+            <summary>
+            FTP 记录格式
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpRecordFormat.Unknow">
+            <summary>
+            未知格式
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpRecordFormat.Windows">
+            <summary>
+            Windows 系统格式
+            </summary>
+            <remarks>
+            <code><![CDATA[12-20-2023  11:00AM       <DIR>          Folder]]></code>
+            <code><![CDATA[12-20-2023  05:00PM              1000000 File.txt]]></code>
+            </remarks>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpRecordFormat.Unix">
+            <summary>
+            Unit 系统格式
+            </summary>
+            <remarks>
+            <code><![CDATA[drwxr-xr-x    2 0        0               6 Jun 09  2021 folder]]></code>
+            <code><![CDATA[-rw-r--r--    1 0        0               0 Dec 21 06:18 file.txt]]></code>
+            </remarks>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.FtpPathExtends">
+            <summary>
+            FTP 路径扩展方法
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpPathExtends.Arrange(System.String)">
+            <summary>
+            整理文件路径
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <returns>文件路径</returns>
+            <remarks>
+            .../...
+            </remarks>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpPathExtends.ArrangeWithSlash(System.String)">
+            <summary>
+            整理文件路径
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <returns>文件路径</returns>
+            <remarks>
+            /.../...
+            </remarks>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpPathExtends.Combine(System.String,System.String[])">
+            <summary>
+            合并文件路径
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <param name="subs">子路径</param>
+            <returns>文件路径</returns>
+            <remarks>
+            .../.../ sub /...
+            </remarks>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpPathExtends.CombineWithSlash(System.String,System.String[])">
+            <summary>
+            合并文件路径
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <param name="subs">子路径</param>
+            <returns>文件路径</returns>
+            <remarks>
+            /.../.../ sub /...
+            </remarks>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.FtpOperate">
+            <summary>
+            FTP 操作类
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpOperate.transmitter">
+            <summary>
+            FTP 传输器
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpOperate.Identify">
+            <inheritdoc/>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpOperate.#ctor(Piggy.ToolKit.Transmitter.FtpTransmitter)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="ftpTransmitter">FTP 传输器</param>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.FtpDirectoryOperate">
+            <summary>
+            FTP 文件夹操作类
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.#ctor(Piggy.ToolKit.Transmitter.FtpTransmitter)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="transmitter">FTP 传输器</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.GetFileNames(System.String)">
+            <summary>
+            获取文件名称列表
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 文件列表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.GetDirectoryNames(System.String)">
+            <summary>
+            获取文件夹名称列表
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 文件夹列表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.GetFileRecords(System.String)">
+            <summary>
+            获取文件记录列表
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 文件记录列表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.GetDirectoryRecords(System.String)">
+            <summary>
+            获取文件夹记录列表
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 文件夹记录列表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.IsExist(System.String)">
+            <summary>
+            检查文件夹是否存在
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 存在状态</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.IsEmpty(System.String)">
+            <summary>
+            检查文件夹是否为空
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 项目数量</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.Create(System.String,System.Boolean)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <param name="overwrite">覆盖模式</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.Upload(System.String,System.String,System.Boolean)">
+            <summary>
+            上传文件夹
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <param name="localPath">本地文件夹路径</param>
+            <param name="overwrite">覆盖模式</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.Download(System.String,System.String,System.Boolean)">
+            <summary>
+            下载文件夹
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <param name="localPath">本地文件夹路径</param>
+            <param name="overwrite">覆盖模式</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.Delete(System.String,System.Boolean)">
+            <summary>
+            删除文件夹
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <param name="recurse">递归模式</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.Rename(System.String,System.String)">
+            <summary>
+            重命名文件夹
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <param name="name">新名字</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.CountFile(System.String)">
+            <summary>
+            统计文件夹下文件数量
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 项目数量</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.CountDirectory(System.String)">
+            <summary>
+            统计文件夹下文件夹数量
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 项目数量</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpDirectoryOperate.Count(System.String)">
+            <summary>
+            统计文件夹下文件（夹）数量
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 项目数量</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.FtpFileOperate">
+            <summary>
+            FTP 文件操作类
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.#ctor(Piggy.ToolKit.Transmitter.FtpTransmitter)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="transmitter">FTP 传输器</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.IsExist(System.String)">
+            <summary>
+            检查文件是否存在
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <returns>操作结果 @ 存在状态</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.Upload(System.String,System.IO.Stream,Piggy.ToolKit.Transmitter.FtpUploadMode)">
+            <summary>
+            上传数据流
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <param name="stream">数据流</param>
+            <param name="mode">上传模式</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.Upload(System.String,System.String,Piggy.ToolKit.Transmitter.FtpUploadMode)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <param name="localPath">本地文件路径</param>
+            <param name="mode">上传模式</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.Upload(System.String,System.Byte[],Piggy.ToolKit.Transmitter.FtpUploadMode)">
+            <summary>
+            上传数据
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <param name="data">数据数组</param>
+            <param name="mode">上传模式</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.Download(System.String,System.IO.Stream)">
+            <summary>
+            下载数据流
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <param name="stream">数据流</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.Download(System.String,System.String,System.Boolean)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <param name="localPath">本地文件路径</param>
+            <param name="overwrite">覆盖模式</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.Download(System.String)">
+            <summary>
+            下载数据
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.Delete(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.Rename(System.String,System.String)">
+            <summary>
+            重命名文件
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <param name="name">新名字</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.GetSize(System.String)">
+            <summary>
+            获取文件大小
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpFileOperate.GetModifyDate(System.String)">
+            <summary>
+            获取文件最后修改时间（Unix 系统可用）
+            </summary>
+            <param name="ftpPath">文件路径</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.FtpTransmitter">
+            <summary>
+            FTP 传输器
+            </summary>  
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpTransmitter.regexUnix">
+            <summary>
+            Unix 文件（夹）记录匹配正则表达式
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpTransmitter.regexWindowsFile">
+            <summary>
+            Windows 文件记录匹配正则表达式
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpTransmitter.regexWindowsDirectory">
+            <summary>
+            Windows 文件夹记录匹配正则表达式
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpTransmitter.regexUnixRecordFormat">
+            <summary>
+            Unix 文件记录格式匹配正则表达式
+            </summary>
+        </member>
+        <member name="F:Piggy.ToolKit.Transmitter.FtpTransmitter.regexWindowsRecordFormat">
+            <summary>
+            Windows 文件记录格式匹配正则表达式
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.Identify">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.RootPath">
+            <summary>
+            根目录
+            </summary>
+            <remarks>
+            ftp://Host:Port/
+            </remarks>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.File">
+            <summary>
+            文件操作类
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.Directory">
+            <summary>
+            文件夹操作类
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.RemoteHost">
+            <summary>
+            远端地址
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.RemotePort">
+            <summary>
+            远端端口
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.Username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.UseBinary">
+            <summary>
+            文件传输的数据类型（默认值: <see langword="true"/>）
+            </summary>
+            <remarks>
+            <list type="bullet">
+                <item>
+                    <term><see langword="true"/></term>
+                    <description>二进制数据传输</description>
+                </item>
+                <item>
+                    <term><see langword="false"/></term>
+                    <description>文本数据传输</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.UsePassive">
+            <summary>
+            工作模式（默认值: <see langword="true"/>）
+            </summary>
+            <remarks>
+            <list type="bullet">
+                <item>
+                    <term><see langword="true"/></term>
+                    <description>被动模式</description>
+                </item>
+                <item>
+                    <term><see langword="false"/></term>
+                    <description>主动模式</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.KeepAlive">
+            <summary>
+            在请求完成之后是否保持到 FTP 服务器的控制连接（默认值: <see langword="true"/>）
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.Timeout">
+            <summary>
+            超时时间（默认值 10_000 毫秒）
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.Credentials">
+            <summary>
+            身份凭据
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpTransmitter.Proxy">
+            <summary>
+            连接代理
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.#ctor(System.String,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="host">远端地址</param>
+            <param name="port">远端端口</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.#ctor(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="host">远端地址</param>
+            <param name="port">远端端口</param>
+            <param name="user">用户名</param>
+            <param name="pass">密码</param>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.GuessRecordFormat(System.String)">
+            <summary>
+            判断记录字符串格式
+            </summary>
+            <param name="record">记录字符串</param>
+            <returns>记录格式</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.PaserRecord(System.String,System.String)">
+            <summary>
+            解析记录字符串
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <param name="record">记录字符串</param>
+            <returns>FTP 记录</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.PaserRecordFromWindows(System.String,System.String)">
+            <summary>
+            解析 Windows 系统格式记录字符串
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <param name="record">记录字符串</param>
+            <returns>FTP 记录</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.PaserRecordFromUnix(System.String,System.String)">
+            <summary>
+            解析 Unix 系统格式记录字符串
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <param name="record">记录字符串</param>
+            <returns>FTP 记录</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.Request(System.String,System.String)">
+            <summary>
+            创建 FTP 请求
+            </summary>
+            <param name="ftpPath">请求路径</param>
+            <param name="method">请求方式，详情请看: <see cref="T:System.Net.WebRequestMethods.Ftp"/></param>
+            <returns>操作结果 @ FTP 请求</returns>
+            <remarks>
+            <list type="bullet">
+                <item>
+                    <term>APPE</term>
+                    <description>表示要用于将文件追加到 FTP 服务器上的现有文件的 FTP APPE 协议方法。</description>
+                </item>
+                <item>
+                    <term>DELE</term>
+                    <description>表示要用于删除 FTP 服务器上的文件的 FTP DELE 协议方法。</description>
+                </item>
+                <item>
+                    <term>RETR</term>
+                    <description>表示要用于从 FTP 服务器下载文件的 FTP RETR 协议方法。</description>
+                </item>
+                <item>
+                    <term>MDTM</term>
+                    <description>表示要用于从 FTP 服务器上的文件检索日期时间戳的 FTP MDTM 协议方法。</description>
+                </item>
+                <item>
+                    <term>SIZE</term>
+                    <description>表示要用于检索 FTP 服务器上的文件大小的 FTP SIZE 协议方法。</description>
+                </item>
+                <item>
+                    <term>NLIST</term>
+                    <description>表示获取 FTP 服务器上的文件的简短列表的 FTP NLIST 协议方法。</description>
+                </item>
+                <item>
+                    <term>LIST</term>
+                    <description>表示获取 FTP 服务器上的文件的详细列表的 FTP LIST 协议方法。</description>
+                </item>
+                <item>
+                    <term>MKD</term>
+                    <description>表示在 FTP 服务器上创建目录的 FTP MKD 协议方法。</description>
+                </item>
+                <item>
+                    <term>PWD</term>
+                    <description>表示打印当前工作目录的名称的 FTP PWD 协议方法。</description>
+                </item>
+                <item>
+                    <term>RMD</term>
+                    <description>表示移除目录的 FTP RMD 协议方法。</description>
+                </item>
+                <item>
+                    <term>RENAME</term>
+                    <description>表示重命名目录的 FTP RENAME 协议方法。</description>
+                </item>
+                <item>
+                    <term>STOR</term>
+                    <description>表示将文件上载到 FTP 服务器的 FTP STOR 协议方法。</description>
+                </item>
+                <item>
+                    <term>STOU</term>
+                    <description>表示将具有唯一名称的文件上载到 FTP 服务器的 FTP STOU 协议方法。</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.Response(System.String,System.String)">
+            <summary>
+            创建 FTP 响应
+            </summary>
+            <param name="ftpPath">请求路径</param>
+            <param name="method">请求方式，详情请看: <see cref="T:System.Net.WebRequestMethods.Ftp"/></param>
+            <returns>操作结果 @ FTP 响应</returns>
+            <remarks>
+            <list type="bullet">
+                <item>
+                    <term>APPE</term>
+                    <description>表示要用于将文件追加到 FTP 服务器上的现有文件的 FTP APPE 协议方法。</description>
+                </item>
+                <item>
+                    <term>DELE</term>
+                    <description>表示要用于删除 FTP 服务器上的文件的 FTP DELE 协议方法。</description>
+                </item>
+                <item>
+                    <term>RETR</term>
+                    <description>表示要用于从 FTP 服务器下载文件的 FTP RETR 协议方法。</description>
+                </item>
+                <item>
+                    <term>MDTM</term>
+                    <description>表示要用于从 FTP 服务器上的文件检索日期时间戳的 FTP MDTM 协议方法。</description>
+                </item>
+                <item>
+                    <term>SIZE</term>
+                    <description>表示要用于检索 FTP 服务器上的文件大小的 FTP SIZE 协议方法。</description>
+                </item>
+                <item>
+                    <term>NLIST</term>
+                    <description>表示获取 FTP 服务器上的文件的简短列表的 FTP NLIST 协议方法。</description>
+                </item>
+                <item>
+                    <term>LIST</term>
+                    <description>表示获取 FTP 服务器上的文件的详细列表的 FTP LIST 协议方法。</description>
+                </item>
+                <item>
+                    <term>MKD</term>
+                    <description>表示在 FTP 服务器上创建目录的 FTP MKD 协议方法。</description>
+                </item>
+                <item>
+                    <term>PWD</term>
+                    <description>表示打印当前工作目录的名称的 FTP PWD 协议方法。</description>
+                </item>
+                <item>
+                    <term>RMD</term>
+                    <description>表示移除目录的 FTP RMD 协议方法。</description>
+                </item>
+                <item>
+                    <term>RENAME</term>
+                    <description>表示重命名目录的 FTP RENAME 协议方法。</description>
+                </item>
+                <item>
+                    <term>STOR</term>
+                    <description>表示将文件上载到 FTP 服务器的 FTP STOR 协议方法。</description>
+                </item>
+                <item>
+                    <term>STOU</term>
+                    <description>表示将具有唯一名称的文件上载到 FTP 服务器的 FTP STOU 协议方法。</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.GetRecords(System.String)">
+            <summary>
+            获取记录列表
+            </summary>
+            <param name="ftpPath">文件夹路径</param>
+            <returns>操作结果 @ 记录列表</returns>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpTransmitter.IsExist(System.String,System.Boolean)">
+            <summary>
+            检查对象是否存在
+            </summary>
+            <param name="ftpPath">对象路径</param>
+            <param name="isDirectory">是否为文件夹</param>
+            <returns>操作结果 @ 存在状态</returns>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.FtpRecord">
+            <summary>
+            FTP 记录
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpRecord.RecordFormat">
+            <summary>
+            记录格式
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpRecord.IsDirectory">
+            <summary>
+            是否为文件夹
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpRecord.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpRecord.Length">
+            <summary>
+            大小
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpRecord.DateTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpRecord.Root">
+            <summary>
+            根目录
+            </summary>
+            <remarks>
+            ftp://Host:Port/
+            </remarks>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpRecord.AbsolutePath">
+            <summary>
+            绝对路径
+            </summary>
+            <remarks>
+            /.../.../
+            </remarks>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpRecord.Path">
+            <summary>
+            路径
+            </summary>
+            <remarks>
+            /.../.../...
+            </remarks>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.FtpRecord.FullPath">
+            <summary>
+            完整路径
+            </summary>
+            <remarks>
+            ftp://Host:Port/.../.../...
+            </remarks>
+        </member>
+        <member name="M:Piggy.ToolKit.Transmitter.FtpRecord.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.UnitFtpRecord">
+            <summary>
+            Unit 系统 FTP 记录
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.UnitFtpRecord.RecordFormat">
+            <inheritdoc/>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.UnitFtpRecord.Flag">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.UnitFtpRecord.Owner">
+            <summary>
+            所有者
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.UnitFtpRecord.Group">
+            <summary>
+            所有组
+            </summary>
+        </member>
+        <member name="T:Piggy.ToolKit.Transmitter.WindowsFtpRecord">
+            <summary>
+            Windows 系统 FTP 记录
+            </summary>
+        </member>
+        <member name="P:Piggy.ToolKit.Transmitter.WindowsFtpRecord.RecordFormat">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>
