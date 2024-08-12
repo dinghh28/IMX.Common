@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMX.Logger", "IMX.Logger\IMX.Logger.csproj", "{95953C3A-D73B-48F3-87FF-DF8294F2E480}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMX.Common.Logger", "IMX.Common.Logger\IMX.Common.Logger.csproj", "{539A5F1D-FD54-42AA-9013-8479C46109BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{95953C3A-D73B-48F3-87FF-DF8294F2E480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95953C3A-D73B-48F3-87FF-DF8294F2E480}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95953C3A-D73B-48F3-87FF-DF8294F2E480}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95953C3A-D73B-48F3-87FF-DF8294F2E480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{539A5F1D-FD54-42AA-9013-8479C46109BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539A5F1D-FD54-42AA-9013-8479C46109BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539A5F1D-FD54-42AA-9013-8479C46109BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539A5F1D-FD54-42AA-9013-8479C46109BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
