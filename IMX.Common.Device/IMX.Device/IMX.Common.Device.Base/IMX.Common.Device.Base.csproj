@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75A2B13D-BA4B-40B3-8B1A-0C532551C061}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IMX.Common.Device.Base</RootNamespace>
+    <AssemblyName>IMX.Common.Device.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="H.Maths">
+      <HintPath>..\..\..\IMX.Common.Library\H.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="H.WPF.Framework">
+      <HintPath>..\..\..\IMX.Common.Library\Framework\H.WPF.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="H.WPF.ToolKit">
+      <HintPath>..\..\..\IMX.Common.Library\Framework\H.WPF.ToolKit.dll</HintPath>
+    </Reference>
+    <Reference Include="IMX.Common.Helper">
+      <HintPath>..\..\..\IMX.Common.Library\IMX.Common.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="IMX.Common.Logger">
+      <HintPath>..\..\..\IMX.Common.Library\IMX.Common.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivi.Visa, Version=7.2.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\IMX.Common.Library\VISA\Ivi.Visa.dll</HintPath>
+    </Reference>
+    <Reference Include="MQTTnet, Version=4.3.6.1152, Culture=neutral, PublicKeyToken=fdb7629f2e364a63, processorArchitecture=MSIL">
+      <HintPath>..\packages\MQTTnet.4.3.6.1152\lib\net48\MQTTnet.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Visa, Version=24.5.0.49303, Culture=neutral, PublicKeyToken=2eaa5af0834e221d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\IMX.Common.Library\VISA\NationalInstruments.Visa.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.Framework">
+      <HintPath>..\..\..\IMX.Common.Library\Piggy.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.VehicleBus.Common">
+      <HintPath>..\..\..\IMX.Common.Library\VehicleBus\Piggy.VehicleBus.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.VehicleBus.Device">
+      <HintPath>..\..\..\IMX.Common.Library\VehicleBus\Piggy.VehicleBus.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.VehicleBus.MessageProcess">
+      <HintPath>..\..\..\IMX.Common.Library\VehicleBus\Piggy.VehicleBus.MessageProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="Piggy.VehicleBus.OperateInterface">
+      <HintPath>..\..\..\IMX.Common.Library\VehicleBus\Piggy.VehicleBus.OperateInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DriveOperate\ASRLOprate.cs" />
+    <Compile Include="DriveOperate\DriveCANOprate.cs" />
+    <Compile Include="DriveOperate\GPIBOprate.cs" />
+    <Compile Include="DriveOperate\MQTTOprate.cs" />
+    <Compile Include="DriveOperate\SuperDriveOprate.cs" />
+    <Compile Include="DriveOperate\TCPIPOprate.cs" />
+    <Compile Include="DriveOperate\USBOprate.cs" />
+    <Compile Include="DriveOperate\VisaOprate.cs" />
+    <Compile Include="Enumerations\MqttPayloadType.cs" />
+    <Compile Include="Helper\DeviceResourceHelper.cs" />
+    <Compile Include="Inerfaces\ISuperDrive.cs" />
+    <Compile Include="Inerfaces\IVisaDrive.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IMX.Common.Device.Com\IMX.Common.Device.Com.csproj">
+      <Project>{35db1e51-27af-4f7f-b713-c381bb533479}</Project>
+      <Name>IMX.Common.Device.Com</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
