@@ -84,5 +84,10 @@ namespace IMX.Common.Function.Enumerations
         /// 振动台
         /// </summary>
         VIBRATIONTABLEFUNC,
+
+        /// <summary>
+        /// 设备集成模块（兆能老化系统集成模块：交流继电器、12V继电器、负载设备）
+        /// </summary>
+        EQUIPFUNC,
     }
 }

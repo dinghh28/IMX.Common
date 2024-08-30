@@ -87,6 +87,8 @@ namespace IMX.Common.Function
             typeof(FunConfig_VibrationTable),
             typeof(FunConfig_SaltFogbox),
             typeof(FunConfig_APU),
+            typeof(FunConfig_Equip),
+
         };
         #endregion
 
@@ -226,6 +228,8 @@ namespace IMX.Common.Function
 
         #region 公共方法
         public abstract OperateResult Execute(object operate);
+
+        //public abstract OperateResult Execute(object operate,object operate1,object operate2);
 
         //public abstract OperateResult Execute(IDeviceOperate operate);
 

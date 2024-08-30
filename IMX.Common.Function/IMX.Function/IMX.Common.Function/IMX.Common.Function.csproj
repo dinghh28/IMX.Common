@@ -58,12 +58,13 @@
     <Reference Include="H.WPF.ToolKit">
       <HintPath>..\..\..\IMX.Common.Library\Framework\H.WPF.ToolKit.dll</HintPath>
     </Reference>
-    <Reference Include="IMX.Common.Device, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="IMX.Common.Device, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\IMX.Common.Library\IMX.Common.Device.dll</HintPath>
+      <HintPath>..\..\..\IMX.Common.Device\IMX.Device\IMX.Common.Device\bin\x64\Debug\IMX.Common.Device.dll</HintPath>
     </Reference>
-    <Reference Include="IMX.Common.Logger">
-      <HintPath>..\..\..\IMX.Common.Library\IMX.Common.Logger.dll</HintPath>
+    <Reference Include="IMX.Common.Logger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\IMX.Common.Logger\IMX.Logger\IMX.Common.Logger\bin\Debug\IMX.Common.Logger.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -95,6 +96,7 @@
     <Compile Include="FuntionConfig\FunConfig_DCLoad.cs" />
     <Compile Include="FuntionConfig\FunConfig_DCSource.cs" />
     <Compile Include="FuntionConfig\FunConfig_DwellTime.cs" />
+    <Compile Include="FuntionConfig\FunConfig_Equip.cs" />
     <Compile Include="FuntionConfig\FunConfig_Gyroscopic.cs" />
     <Compile Include="FuntionConfig\FunConfig_Product.cs" />
     <Compile Include="FuntionConfig\FunConfig_Protect.cs" />
